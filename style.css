@@ -161,6 +161,13 @@ article p {
   background-color: #fff;
 }
 
+/*tabletformaat*/
+@media (min-width: 768px) {
+  .blog {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  }
+}
+
 @media (min-width: 1024px) {
   body {
     width: 1200px;
@@ -185,6 +192,6 @@ article p {
   }
 
   .blog {
-    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   }
 }
