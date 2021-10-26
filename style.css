@@ -154,6 +154,13 @@ article p {
   font-size: 1.5em;
 }
 
+.form {
+  grid-column: 1 / -1;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
 @media (min-width: 1024px) {
   body {
     width: 1200px;
