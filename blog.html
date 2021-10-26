@@ -42,7 +42,7 @@
         <article>
             <h2>Insturen</h2>
             <p>Stuur hier je mooiste foto van je vintage spullen in.</p>
-            <form name="formulier" method="POST" data-netlify="true"> 
+            <form name="formulier" method="POST" data-netlify="true" id="upload"> 
                 <p>
                     <label>Naam: <input type="text" name="name" /></label>   
                 </p>
@@ -54,14 +54,14 @@
                 </p>
                 <p>
                     <input type="reset">
-                    <input type="submit" name="upload">
+                    <button type="submit" form="upload">Verzenden</button>
                 </p>
             </form>
         </article>
         <article>
             <h2>Pol</h2>
             <p>Waar gaat jouw voorkeur naar uit?</p>
-            <form name="formulier" method="POST" data-netlify="true">
+            <form name="formulier" method="POST" data-netlify="true" id="pol"> 
                 <p>
                     <label>Jouw voorkeur:
                         <p><input type="radio" name="Voorkeur" value="Vintage"/> Vintage</p>
@@ -70,12 +70,13 @@
                     </label>
                 </p>
                 <p>
-                    <input type="submit" name="Pol">
+                    <input type="submit" form="pol">
                 </p>
             </form>
         </article>
         <article>
             <h2>Vintage Jazz</h2>
+            <p>Voor de liefhebber.</p>
             <iframe width="420" height="345" src="https://www.youtube.com/embed/PpJYc93QaS4?autoplay=1">
             </iframe>
         </article>
