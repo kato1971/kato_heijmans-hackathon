@@ -1,12 +1,12 @@
 /* Mobielformaat */
-.container > div {
-  display: flex;
-  color: #000;
-}
 
-.container { 
+main { 
   display: grid;
   grid-template-columns: repeat(6 ,1fr);
+  padding-bottom: 20px;
+  justify-items: center;
+  align-items: center;
+  background-color: #fff;
 }
 
 img {
@@ -32,6 +32,8 @@ html, body {
   grid-auto-rows: 200px;
   grid-auto-flow: dense;
   background-color: #fff;
+  align-items: center;
+  justify-items: center;
 }
 
 .horizontal {
@@ -57,21 +59,19 @@ a {
   font-weight: bolder;
 }
 
-.header {
+header {
   grid-column: 1 /-1;
   background-image: url(images/header.jpg);
   background-size: cover;
   opacity: 0.5;
   height: 200px;
-  justify-content: end;
-  align-items: end;
 }
 .logo {
   display: none;
 }
 
-.menu {
-  grid-column: 1 / -1;
+nav {
+  display: flex;
   background-color: #6b383f;
   justify-content: space-evenly;
   align-items: center;
@@ -88,30 +88,72 @@ a {
   border-bottom: 4px solid #000;
 }
 
-.bigimage {
+figure {
   grid-column: 1 / -1;
   background-color: #fff;
   padding: 20px;
 }
-.bigimage img {
+figure img {
   opacity: 0.7;
 }
 
 .title {
   grid-column: 1 / -1;
-  justify-content: center;
-  align-items: center;
   background-color: #fff;
+  font-family: Bon Voyage Script;
+  font-size: 4em;
+  font-weight: bolder;
+  letter-spacing: 15px;
 }
 
-.content {
+section {
   grid-column: 1 / -1;
   justify-content: center;
   background-color: #fff;
+  margin: 15px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #eee;
+}
+section h1 {
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+section h2 {
+  font-size: 2em;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+section p {
+  font-size: 1.5em;
 }
 
-.footer {
-  grid-column: 1 / -1;
+article {
+  background-color: #fff;
+  margin: 15px;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #eee;
+  height: 90%;
+  width: 90%;
+}
+article h1 {
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+article h2 {
+  font-size: 2em;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+article p {
+  font-size: 1.5em;
+}
+
+footer {
+  display: flex;
   background-color: #6b383f;
   justify-content: space-evenly;
   padding: 20px 0;
@@ -135,31 +177,16 @@ a.fab:hover {
 
 #more {display: none;}
 
-article {
-  margin: 15px;
-  border: 1px solid #eee;
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 10px 10px 5px #eee;
+.form {
+  grid-column: 2 / -1;
+  background-color: #fff;
 }
-article h1 {
-  font-size: 2.5em;
-  font-weight: bolder;
-}
-article h2 {
-  font-size: 2em;
-  font-weight: bolder;
-  margin: 10px 0;
-}
-article p {
+.form p {
   font-size: 1.5em;
 }
 
-.form {
-  grid-column: 1 / -1;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
+label {
+  line-height: 35px;
 }
 
 /*tabletformaat*/
@@ -168,13 +195,7 @@ article p {
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
   }
 
-  .menu {
-    grid-column: 1 / -1;
-    background-color: #6b383f;
-    height: 50px;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1.5em;
+  nav {
     flex-direction: row;
   }
 }
@@ -185,30 +206,25 @@ article p {
     margin: 0 auto;
   }
 
-  .menu {
-    grid-column: 1 / -1;
-    background-color: #6b383f;
-    height: 50px;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1.5em;
+  nav {
     flex-direction: row;
   }
 
   .logo {
     display: flex;
-    padding: 0px 30px 30px 0px;
+    padding: 100px 30px 0px 0px;
     font-family: Bon Voyage Script;
     font-size: 4em;
     font-weight: bolder;
-    letter-spacing: 15px; 
+    letter-spacing: 15px;
+    justify-content: flex-end;
   }
 
-  .bigimage {
+  figure {
     grid-column: 1 / 4;
   }
 
-  .content {
+  section {
     grid-column: 4 / -1;
   }
 
